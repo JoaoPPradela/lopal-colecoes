@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        //Problema
+        //Armazenar diversos tipos de informação de cada aluno
+        // let nome1 = 'Pradela ';
+        // let idade1 = 16
+        // let sesi1 = 'Catumbi';
+        // let temPet1 = true;
+        
+        // let nome2 = 'Bia'
+        // let idade2 = 16
+        // let sesi2 = 'Catumbi'
+        // let temPet2 = true;
+
+        let aluno = {
+            nome:'Pradela',
+            idade: 16,
+            sesi: 'Catumbi',
+            temPet: true
+        }
+
+        //document.write(aluno); // não imprime os atributos por padrão 
+        console.log(aluno);
+
+        document.write('Nome ' + aluno.Nome + '<br>');
+        document.write('Idade' + aluno.Idade + '<br>');
+        document.write('Sesi ' + aluno.Sesi + '<br>');
+        document.write('Tem Pet ' + aluno.temPet + '<br>');
+
+
+        //Criando um array de ojbetos 
+
+        let alunos = [
+            {nome: 'Pradela', idade: 16, sesi: 'Catumbi', temPet: true}
+        ];
+
+        for(let i = 0; i < aluno.length; i++) {
+            //document.write('<p>O(a) aluno(a)' + alunos[i].nome + ' tem ' + alunos[i].idade +' anos e é do SESI' + alunos[i.sesi] + '</p>');
+
+            document.write (`<p>O(a aluno(a) ${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}. ${alunos[i].temPet? "Tem pet." : "Não temPet."}`)
+        }
+
+
+        
+
+
+
+    </script>
+</body>
+</html>
