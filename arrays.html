@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-             /*Problema
+         /*Problema
         const aluno1 = "João";
         const aluno2 = "Arthur";
         const aluno3 = "Pradela";
@@ -26,46 +26,31 @@
             " Daniel", " Davi",];
  
  
+            let adicionar = prompt("Você deseja adicionar um nome à lista de alunos? (s/n)");
  
-        //Acrescentar um nome ao final do arrays
-        //const alunos = ["João", " Arthur", " Pradela", " Bruna L", " Bruna T", " Bruna V", " Cauã",
-        // " Daniel", " Davi", "Gabriel"];
- 
-        alunos.push("Gabriel");
-        alunos.push("Henrique");
- 
-        // Desenvolva uma forma de solicitar ai usuario os demais nomes
-        //que devem ser acrescentados à lista de alunos:
-        // - o programa deve perguntart ao ususario se ele deseja acrescentar um nome;
-        // - o programa deve adicionar o nome digitado pelo usario ao final
-        //da lista "alunos";
-        // - o programa deve perguntar se o usuario quer digitar mais um nome.
-        //caso não, ele deve exinir a lista de nomes completa na tela e finalizar o programa.
- 
-        // Lista de alunos inicial
-
-// Função para perguntar ao usuário se ele deseja adicionar um nome
-function adicionarAluno() {
-    let adicionar = prompt("Deseja adicionar um nome à lista de alunos? (s/n)");
-
-    // O loop continua até o usuário digitar 'n' ou 'N'
-    while (adicionar === 's' || adicionar === 'S') {
-        let nome = prompt("Digite o nome do aluno:");
-        alunos.push(nome);  // Adiciona o nome à lista de alunos
-        adicionar = prompt("Deseja adicionar mais um nome? (s/n)");
-    }
-
-    // Quando o usuário digita 'n', o programa exibe a lista completa e encerra
-    if (adicionar === 'n') {
-        alert("Lista de alunos:");
-        for (let indice = 0; i < alunos.length; indice++) {
-            alert(alunos[indice]);
-        }
-    }
-}
-
-// Chama a função para iniciar o processo
-adicionarAluno();
+ if (adicionar === "s") {
+     let pergunta = prompt("Qual nome você deseja adicionar a essa lista?");
+     alunos.push(pergunta);
+  
+     let resposta = prompt("Deseja adicionar mais um nome? (s/n)");
+  
+     while (resposta === "s") {
+         let nome = prompt("Digite o nome do aluno:");
+         if (nome) alunos.push(nome);
+         resposta = prompt("Deseja adicionar mais um nome? (s/n)");
+     }
+ }
+  
+ document.write("<h3>Lista de Alunos:</h3>");
+ for (let indice = 0; indice < alunos.length; indice++) {
+     document.write(alunos[indice] + "<br>");
+ }
+  
+ if (alunos.length === 0) {
+     document.write("Nenhum aluno foi adicionado.");
+ }
+    </script>
+            
 
 
 
@@ -85,13 +70,7 @@ adicionarAluno();
         
         
         
-        for (let indice = 0; indice < alunos.length; indice++) {
-            document.write(alunos[indice] + "<br>");
-            //document.write(alunos[0]);
-            //document.write(alunos[1]);
-            //document.write(alunos[2]);
-            //document.write(alunos[3]);
-            // ....
+        
         }
 
         
